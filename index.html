@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.2/jquery.min.js"></script> -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>糖少少</title>
+    <style>
+        *{
+            margin: 0;
+        }
+        
+        #demo2{
+            background-color: rgba(0, 0, 0, 0.6);
+            background-size: cover;
+            height: 844px;
+            width: auto;
+        }
+
+        #demo1{
+            padding-top: 20px;
+            color: white;
+            text-align: center;
+        }
+        body {
+            background: url("./background.png");
+            background-size: cover;
+            background-position: center;
+            height: 844px;
+            position: relative;
+        }
+
+        .HeroGroup {
+            position: fixed;
+            bottom: 180px;
+            margin: auto;
+            left: 0;
+            right: 0;
+            background: linear-gradient(296.89deg, rgba(255, 204, 126, 0.8) 6.72%, rgba(107, 204, 150, 0.8) 94.05%);
+            box-shadow: 0px -4px 6px rgba(255, 252, 249, 0.3);
+            /* box-shadow: 0px 1px 3px rgba(0,0,0,0.1), 0px 20px 40px rgba(23,0,102,0.2), inset 0px 0px 0px 0.5px rgba(255,255,255,0.5); */
+            backdrop-filter: blur(6.5px);
+            border-radius: 46px;
+            max-width: 280px;
+            height: 256px;
+            display: grid;
+            grid-template-rows: auto;
+            grid-gap: 10px;
+            text-align: center;
+            justify-items: center;
+            justify-content: center;
+            align-content: center;
+            align-items: center;
+        }
+
+        .apk{
+            font-size: 20px;
+  font-weight: 600;
+  color: white;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 6px 8px;
+  /* gap: 5px; */
+  width: 220px;
+  height: 50px;
+  background: #6BCC96;
+  border-radius: 48px;
+        }
+
+        .text{
+            color: #6F728E;
+  font-size: 20px;
+  font-weight: 600;
+        }
+    </style>
+     <script>
+        window.onload = function(){
+        // print("test")
+        var ua = navigator.userAgent.toLocaleLowerCase();
+        var isWeixin = ua.indexOf('micromessenger')!= -1;
+        if(isWeixin){
+            console.log("true")
+            var t = document.getElementById('demo2')
+            t.style.display = 'block'
+            // $("#demo2").show()
+            // $("#demo2").css('visibility','block')
+            // $("#demo1").show()
+            // $("#demo1").css('display','block')
+        }else{
+            var t = document.getElementById('demo2')
+            t.style.display = 'none'
+            console.log("false")
+    
+            // $("#demo2").hide()
+            // $("#demo2").css('visibility','none')
+            // $("#demo1").hide()
+            // $("#demo1").css('display','none')
+    
+            // $("#demo2").show()
+            // $("#demo2").css('visibility','block')
+            // $("#demo1").show()
+            // $("#demo1").css('display','block')
+        }
+        }
+        
+    </script>
+</head>
+
+<body>
+   
+    <div class="Hero">
+        <div id="demo2">
+            <div id="demo1">
+                <h1>请点击右上角 "..."</h1>
+                <h1>选择在浏览器打开</h1>
+                <h3>(暂仅支持安卓用户)</h3>
+            </div>
+        </div>
+        <div id="demo">
+            <!-- <div>
+                <h1>请点击右上角 ...</h1>
+                <h1>选择在浏览器打开</h1>
+            </div> -->
+        </div>
+        <div class="HeroGroup">
+            <img src="./icon.png" width="73px" alt="">
+            <p class="text">糖少少</p>
+            <a class="apk" href="https://sugarless.oss-cn-hangzhou.aliyuncs.com/com.sugarless.tangshaoshao.1.5.apk">立即前往下载</a>
+        </div>
+    </div>
+</body>
+
+
+</html>
